@@ -37,3 +37,9 @@ ls -la release/*-linux.yml
 ```
 
 If both files exist, packaging produced the Linux artifact + updater metadata that `electron-updater` expects.
+
+# Windows (.exe)
+
+The Windows NSIS `.exe` installer is produced by the `build-windows` job in the `Build Desktop App` CI workflow (`.github/workflows/build-desktop.yml`), which runs on `windows-latest`. It is downloadable from the workflow run's artifacts under the name `<artifact_prefix>-windows-x64` (for example `desktop-windows-x64`).
+
+Local Windows builds are not supported on Linux or macOS hosts; use the CI job to produce the installer.
